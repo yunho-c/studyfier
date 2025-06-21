@@ -1,3 +1,5 @@
+#![allow(unused_imports)]
+#![allow(unused_variables)]
 use pdf::file::FileOptions;
 use pdf_render::render_page;
 use pdf_render::tracer::{TraceCache, Tracer};

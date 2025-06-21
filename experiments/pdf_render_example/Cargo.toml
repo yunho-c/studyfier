@@ -3,8 +3,17 @@ name = "pdf_render_example"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies.pdf]
+git = "https://github.com/pdf-rs/pdf"
+default-features = false
+features = ["dump"]
+
 [dependencies]
 env_logger = "0.11.3"
-pdf = "0.9.0"
+# pdf = "0.9.0"
 # pdf_render = { path = "~/Documents/GitHub/pdf_render/render" }
 pdf_render = { path = "../../../pdf_render/render" }
+
+[lints.rust]
+unused_imports = "allow"
+unused_variables = "allow"

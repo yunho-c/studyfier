@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'pdf_render_example'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=pdf_render_example",
+                    "--package=pdf_render_example"
+                ],
+                "filter": {
+                    "name": "pdf_render_example",
+                    "kind": "bin"
+                }
+            },
+            // "args": ["~/Documents/GitHub/assets/pdf/relativity.pdf"],
+            "args": ["/Users/yunhocho/Documents/GitHub/assets/pdf/relativity.pdf"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'pdf_render_example'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=pdf_render_example",
+                    "--package=pdf_render_example"
+                ],
+                "filter": {
+                    "name": "pdf_render_example",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
